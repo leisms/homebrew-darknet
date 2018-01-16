@@ -7,7 +7,7 @@ class Darknet < Formula
   depends_on "opencv@2" => :build
 
   def install
-    system "make", "PREFIX=#{prefix}"
+    system "make", "PREFIX=#{prefix}", "OPENCV=1"
     bin.install "darknet"
   end
 
